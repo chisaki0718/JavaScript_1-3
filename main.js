@@ -6,21 +6,21 @@ const tasks = ['掃除', '買い物', '散歩'];
 console.log(title);
 
 //タスクリスト用関数
-const taskList = (tasks) => {
+const showtasksList = tasks => {
 tasks.forEach((value, index) => {
   console.log(`${index}:${value}`);
 });
 };
-taskList(tasks);
+showtasksList(tasks);
 
 //「タスクを入力する欄がある」の定数
 const task = window.prompt('タスクを入力してください');
 
 //タスクの内容を入力するとタスクが追加され、一覧表示される
-const addTask = (task) => {
+const addTask = task => {
   console.log(title);
   tasks.push(task);
-  taskList(tasks);
+  showtasksList(tasks);
   window.alert('新しいタスクを追加しました。');
 };
 addTask(task);
